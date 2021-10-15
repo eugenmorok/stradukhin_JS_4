@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function getDateProperties(milliseconds) {
+
+            let date = new Date(milliseconds);
+
+            let vday = date.getDate(), 
+                vmonth = date.getMonth() + 1, 
+                vyear = date.getFullYear(), 
+                vhour = date.getHours(), 
+                vminutes = date.getMinutes(), 
+                vseconds = date.getSeconds();
+
+            let result = {
+                day: vday , 
+                month:vmonth, 
+                year:vyear, 
+                hour:vhour, 
+                minutes:vminutes, 
+                seconds:vseconds 
+            };
+                
+            
+            //Ваш ответ
+            //console.log(date);
+            //console.log(result);
+            
+            return result;
+    }
+    getDateProperties(1628414191622);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

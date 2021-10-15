@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script>
+"use strict";
+
+function changeStyle() {
+//Ваш ответ
+    let divVal   = document.querySelector('#elem').value ;
+    let divColor = document.querySelector('#value').value;
+    let divAtr   = document.querySelector('#style').value;
+
+    document.querySelector(divVal).style[divAtr] = divColor;
+
+    //alert(divVal+" "+divColor+" "+divAtr);
+    
+    
+}
+</script>
+
+</head>
+
+<body>
+<div class="myDiv" style="background-color:red; height:300px; font-family:Arial,Helvetica, sans-serif">Текст в блоке</div>
+
+<input type="text" value=".myDiv" id="elem">
+<input type="text" value="backgroundColor" id="style">
+<input type="text" value="#ccc" id="value">
+<input type="button" value="Изменить стиль" onClick="changeStyle()" />
+
+</body>
+
+</html>

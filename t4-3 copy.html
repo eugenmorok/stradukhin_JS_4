@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!--
+Массивы можно объединять и конвертировать в одну строку. Рассмотрим пример конвертации массива в строку:
+let arr = [1, 2, 3, 4, 5, 6];
+console.log(typeof arr);
+//object. Важно помнить, что массив - это частный случай объекта в JavaScript.
+<strong>document.writeln(arr);</strong>
+//Будет выведено: 1,2,3,4,5,6
+Команда writeln - делает печать на страницу и переводит каретку на новую строку. Но в html документах перевод каретки не отработает без явного указания сохранения форматирования.
+Здесь может помочь тег pre.
+Например:
+document.write('<pre>');
+document.writeln(arr);
+document.write('</pre>');
+Возвращаясь к команде document.writeln(arr) следует отметить, что она произведет конвертацию массива в строку.
+Если же нам нужно превратить массив в строку явно и при этом изменить разделитель (выше был разделитель по-умолчанию применен - запятая), то нам нужно написать следующий код:
+let arrToStr = arr.join('/');
+document.writeln(arrToStr);
+//Будет выведено: 1/2/3/4/5/6
+
+Полный код примера выглядит следующим образом:
+
+let arr = [1, 2, 3, 4, 5, 6];
+console.log(typeof arr);
+document.write('<pre>');
+document.writeln(arr);
+let arrToStr = arr.join('/');
+document.writeln(arrToStr);
+document.write('</pre>');
+//Будет выведено: 1/2/3/4/5/6
+
+Для закрепления знаний доработайте код, который мы создавали в задании 4.2(он представлен ниже). И осуществите вывод массива через join с применением символа разделителя "/".
+-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Задание 4.3. Объединение массива</title>
+</head>
+<body>
+<script>
+{
+"use strict";
+
+let prоducts =  ['GTA5', undefined, 'Mafia 2', 'Serious Sam 3'];
+
+function printProduct(arr) {
+let tmpArr = [];
+for(let i = 0; i < arr.length; i++)
+{
+
+if (arr[i] != undefined) {
+
+tmpArr.push(arr[i].trim());
+}
+
+}
+//С полученным результатом tmpArr осуществите команду join с разделителем "/"
+return tmpArr;
+}
+
+//Здесь вызовите функцию printProduct.
+//Передайте ей массив с продуктами
+//И выведите результат на страницу используя команду document.write
+
+let arr = printProduct(prоducts);
+
+
+document.write('<pre>');
+//document.writeln(arr);
+let arrToStr = arr.join('/');
+document.writeln(arrToStr);
+document.write('</pre>');
+
+}
+</script>
+</body>
+</html>

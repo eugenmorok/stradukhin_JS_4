@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script>
+function getStyle(nameStyle) {
+//Ваш ответ. Получаем доступ к элементу myDiv узнаем значение свойства, которое содержит переменная nameStyle. И полученное значение выводим в параметр innerText элементу p.
+
+let md = document.querySelector('.myDiv');
+
+result = md.style[nameStyle];
+
+//console.log(result);
+document.querySelector('p').innerText=result;
+
+
+}
+</script>
+</head>
+<body>
+<div class="myDiv" style="background-color:red; height:300px; font-family:Arial,Helvetica, sans-serif">Текст в блоке</div>
+<p></p>
+<input type="button" value="Получить стиль" onClick="getStyle('backgroundColor')" />
+</body>
+</html>
